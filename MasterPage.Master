@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="QuoteLogin.MasterPage" %>
+<%@ Register Assembly="QuoteLogin" Namespace="ControlLibrary.Controls" TagPrefix="cstate" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML      1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Master Page</title>
+    <link rel="stylesheet" href="QuoteStyle.css" />
+    <script src="html2canvas.js" type="text/javascript"></script>
+</head>
+<body>
+    <cstate:QuoteControlState ID="qcs" runat="server" />
+    <script>
+        var clicked = false;
+        function PrintPanel() {
+            var printVars = document.getElementsByClassName("PrintDiv");
+            var printWindow = window.open('PrintWindow.html', 'PrintWindow', 'height=800,width=1000');
+            //printWindow.document.head.innerHTML = '<link rel="stylesheet" type="text/css" href="~/QuoteStyle.css"/>';
+            
+            for (var i = 0; i < printVars.length; i++) {
+                //var newPrintEle = printWindow.document.body.createElement("div");
+                //newPrintEle.innerHTML = printVars[i].innerHTML;
+                //printWindow.document.body.appendChild(newPrintEle);
+                printWindow.document.body.innerHTML += printVars[i].innerHTML;
+            }
+            return true;
+
+        }
+        function CheckBrowser() {
+            if (clicked == false) {
+                //Browser closed   
+            } else {
+                //redirected
+                clicked = false;
+            }
+        }
+        function bodyUnload() {
+            if (clicked == false)//browser is closed
+            {
+                var request = GetRequest();
+                request.open("POST", "../LogOut.aspx", false);
+                request.send();
+            }
+        }
+
+        function GetRequest() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return xmlhttp;
+        }
+
+        function Validate() {
+            var isValid = false;
+            isValid = Page_ClientValidate('RegExValidation');
+            return isValid;
+        }
+    </script>
+    <form id="MasterForm" class="MainForm" runat="server">
+            <asp:ContentPlaceHolder ID="Main" runat="server" />
+    </form>
+</body>
+</html>
