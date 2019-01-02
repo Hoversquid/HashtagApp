@@ -1,0 +1,10 @@
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\bin\QuoteLogin.dll.config
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\bin\QuoteLogin.dll
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\bin\QuoteLogin.pdb
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\obj\Release\QuoteLogin.csproj.CoreCompileInputs.cache
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\obj\Release\QuoteLogin.dll
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\obj\Release\QuoteLogin.pdb
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\obj\Release\QuoteLogin.csprojAssemblyReference.cache
+C:\Users\Hoversquid\Source\Repos\QuoteLogin\QuoteLogin\obj\Release\QuoteLogin.csproj.CopyComplete
